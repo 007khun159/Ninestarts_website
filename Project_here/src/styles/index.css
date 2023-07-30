@@ -123,53 +123,47 @@
     --bs-form-invalid-border-color: #dc3545;
 }
 
-.header-page{
+.header-page {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     padding-top: 3rem;
-    border: 1px solid red;
-    padding-left: 9rem;
+    padding-left: 10rem;
     max-width: 1890px;
     height: 500px;
     background-color: #fef8f5;
 }
-.texting h1{
+  
+.texting h1 {
     padding-bottom: 1rem;
     font-size: 40px;
     color: #4e4039;
-
 }
-
-.texting p{
+  
+.texting p {
     padding-bottom: 1rem;
     font-size: 20px;
     color: #a08f86;
     margin-bottom: 2rem;
-
 }
-
-.texting a{
-    
+  
+.texting a {
     background-color: #eb5d1e;
-    padding:8px 28px;
+    padding: 8px 28px;
     margin-top: 10px;
     font-size: 16px;
     color: white;
-
 }
-
-.hero-img img{
-
+.hero-img img {
+    border: 1px solid slateblue;
     max-width: 700px;
     width: 50%;
     margin-left: 400px;
-    padding-right:40px;
+    padding-right: 40px;
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
-
-
+  
 @keyframes up-down {
     0% {
       transform: translateY(0);
@@ -178,3 +172,91 @@
       transform: translateY(-20px); /* Adjust this value to control the vertical movement */
     }
   }
+  
+
+/*Section2*/
+
+/*Section2*/
+.second-sector {
+    margin-top: 2rem;
+    display: flex;
+    height: 500px;
+    width: 1440px;
+    margin-left: 12rem;
+}
+
+.second-sector img{
+    width: 30%;
+    margin-right: 4rem;
+    
+    
+}
+.grouping-text{
+    flex-direction: row;
+    width: 900px;
+    padding: 7rem;
+    margin-bottom: 20px;
+
+}
+
+.texing2{
+    margin-bottom: 30px;
+}
+.texing2 h1{
+    margin-bottom: 10px;
+    color: #4e4039;
+}
+.texing2 p{
+    color: #5a6570;
+}
+
+.all-stagement{
+    display: flex;
+
+}
+  
+.stagement_1{
+    padding-right: 5rem;
+}
+
+.stagement_1 h4{
+    color: #7a6960;
+}
+.stagement_1 p{
+    color: #5a6570;
+}
+
+.stagement_2 h4{
+    color: #7a6960;
+}
+.stagement_2 p{
+    color: #5a6570;
+}
+
+/*ต้องทำการอ้างอิงค์ตัวของ class อย่างละเอียด*/
+.second-sector .grouping-text .all-stagement .stagement_1 .custom-icon1,
+.second-sector .grouping-text .all-stagement .stagement_2 .custom-icon1 {
+  font-size: 40px; /* Adjust the size as needed */
+  color: #f39e7a; /* Change to the desired color */
+}
+
+@keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+/* Apply the slide-up animation to the text elements */
+.second-sector .grouping-text .texing2,
+.second-sector .grouping-text .stagement_1,
+.second-sector .grouping-text .stagement_2,
+.move-picture{
+    animation: slide-up 1s ease-in-out;
+}
+
+

@@ -1,6 +1,7 @@
 import Navbar from './components/navbar'
 import Index from './pages/index'
 
+
 function App() {
   
 

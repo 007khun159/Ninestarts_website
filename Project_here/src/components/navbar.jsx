@@ -1,6 +1,9 @@
 import React from 'react'
 import '../styles/navbar.css'
 
+//import Img
+
+
 function navbar() {
   return (
     <div className='container-navbar'>
@@ -10,7 +13,7 @@ function navbar() {
             </div>
             <ul>
                 <li><a href='#'>Home</a></li>
-                <li><a href='#'>About Us</a></li>
+                <li><a href='#'>About Us </a></li>
                 <li><a href='#'>Services</a></li>
                 <li><a href='#'>Portfolio</a></li>
                 <li><a href='#'>Team</a></li>
