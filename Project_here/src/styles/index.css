@@ -156,7 +156,6 @@
     color: white;
 }
 .hero-img img {
-    border: 1px solid slateblue;
     max-width: 700px;
     width: 50%;
     margin-left: 400px;
@@ -380,7 +379,7 @@
 .portfolio-objects {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Display 3 items per row */
-    grid-gap: 0px; /* Add some gap between the items */
+    grid-gap: 0; /* Set gap to 0 to remove spacing between items */
 }
 
 
@@ -388,6 +387,16 @@
 
     width: 70%;
     margin-bottom: 3rem;
+    border-radius: 15px;
+}
+
+/*ทำการซ่อน object  ที่ถูก Filter เอาไว้
+  เพื่อที่จะทำการ ลบ space ระหว่าง grid
+  โดยอ้างอิงค์ Function จาก  บรรทัด 185  "show" || "hidden"
+
+*/
+.portfolio_class.hidden {
+    display: none;
 }
 
 .nav-bar-4 .nav-select ul li {
@@ -400,3 +409,20 @@
     cursor: pointer;
     color: #eb5d1e;
 }
+
+/*ทำการเพิ่มเขาไปยังการ filter */
+.portfolio_class.show {
+    animation: slide-up 0.6s ease-in-out;
+}
+
+.portfolio_class.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transform: scale(0.8);
+    transition: opacity 0.2s ease-in-out,
+                height 0.2s ease-in-out,
+                transform 0.2s ease-in-out;
+}
+
+

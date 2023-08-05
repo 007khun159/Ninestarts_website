@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/index.css'
+
+
 // Picture import
 import Rocket from '../assets/img/hero-img.svg'
 import About from '../assets/img/about-img.svg'
@@ -13,8 +15,6 @@ import Portfolio7  from '../assets/img/portfolio/portfolio-7.jpg'
 import Portfolio8  from '../assets/img/portfolio/portfolio-8.jpg'
 import Portfolio9  from '../assets/img/portfolio/portfolio-9.jpg'
 
-
-
 //Icon
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import ViewInArOutlinedIcon from '@mui/icons-material/ViewInArOutlined';
@@ -22,9 +22,36 @@ import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import SpeedIcon from '@mui/icons-material/Speed';
 import PublicIcon from '@mui/icons-material/Public';
+import { MenuItem } from '@mui/material'
+
+
+
+// Select Protfolio
+const portfolioItems = [
+  { image: Portfolio1, category: 'App', title: 'App Project1' },
+  { image: Portfolio2, category: 'Web', title: 'Card Project1' },
+  { image: Portfolio3, category: 'App', title: 'Card Project2 '},
+  { image: Portfolio4, category: 'App', title: 'App Project3' },
+  { image: Portfolio5, category: 'Web', title: 'Card Project2' },
+  { image: Portfolio6, category: 'Web', title: 'Card Project3' },
+  { image: Portfolio7, category: 'Card', title: 'Card Project2' },
+  { image: Portfolio8, category: 'Card', title: 'Card Project3' },
+  { image: Portfolio9, category: 'Card', title: 'Card Project3' },
+
+]
 
 
 function index() {
+  
+  // Function all 
+  const [activeCategory , setActiveCategory] = useState('All');
+
+  const handleNavClick = (category) => {
+    setActiveCategory(category);
+  };
+
+
+
   return (
     <div className='container-hero'>
 
@@ -143,106 +170,30 @@ function index() {
           <div className="nav-bar-4">
               <nav className='nav-select'>
                   <ul>
-                    <li><a>All</a></li>
-                    <li><a href='App'>App</a></li>
-                    <li><a href='Card'>Card</a></li>
-                    <li><a href='Web'>Web</a></li>
+                    <li><a onClick={()=> handleNavClick('All')}>All</a></li>
+                    <li><a onClick={()=> handleNavClick('App')}>App</a></li>
+                    <li><a onClick={()=> handleNavClick('Card')}>Card</a></li>
+                    <li><a onClick={()=> handleNavClick('Web')}>Web</a></li>
                   </ul>
               </nav>
           </div>
 
-          <div className="portfolio-objects">
-
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio1}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio2}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio3}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio4}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio5}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio6}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio7}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio8}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-            <div className="portfolio_class">
-              
-              
-              <img src={Portfolio9}/>
-
-               <div className="detail-links"></div>
-               <div className="detail-information"></div>
-
-            </div>
-
-          </div>
-          
-          
-          
-          
-          
-          
-          
+          <div className='portfolio-objects'>
+            {portfolioItems.map((item, index) => (
+              <div
+                key={index}
+                className={`portfolio_class ${activeCategory === 'All' || item.category === activeCategory ? 'show' : 'hidden'}`}
+              >
+                {(activeCategory === 'All' || activeCategory === item.category) && (
+                 <div className={`portfolio_class ${activeCategory === 'All' || item.category === activeCategory ? 'show' : 'hidden'}`}>
+                    <img src={item.image} alt={item.title} className='image_texting'/>
+                    <div className='detail-links'></div>
+                    <div className='detail-information'></div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>        
         </div>        
 
 
