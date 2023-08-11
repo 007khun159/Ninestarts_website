@@ -348,6 +348,7 @@
 .fourth-section{
     width: 1890px;
     box-sizing: border-box;
+    
 }
 
 .fourth-section .detail-text{
@@ -360,7 +361,7 @@
    
 }
 
-.nav-bar-4 .nav-select{
+.nav-bar-4 .nav-select nav{
     margin-bottom: 2rem;
 
 
@@ -426,3 +427,35 @@
 }
 
 
+/*Fifth Section*/
+.fifth-section{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    background-color:#fef8f5 ;
+}
+.fifth-section .text-detail{
+    border: 1px solid red;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+.fifth-section .text-detail h4{
+    padding-top: 20px;
+
+}
+.fifth-section .text-detail h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.fifth-section .DropDown-text{
+    border: 1px solid red;
+    margin-top: 20px;
+}
+
+.fifth-section .DropDown-text li{
+    list-style: none;
+
+}
