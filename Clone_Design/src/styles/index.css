@@ -354,10 +354,12 @@
 .fourth-section .detail-text{
     margin-top: 20px;
     text-align: center;
+    color: #4e4039;
 }
 
 .fourth-section .detail-text h2{
     margin-bottom: 10px;
+    color: #c2b7b1;
    
 }
 
@@ -403,6 +405,7 @@
 .nav-bar-4 .nav-select ul li {
 
     font-size: 20px;
+    margin-bottom: 3rem;
 
 }
 
@@ -443,11 +446,15 @@
 }
 .fifth-section .text-detail h4{
     padding-top: 20px;
+    font-size: 24px;
+    color: #c2b7b1;
 
 }
 .fifth-section .text-detail h2{
     margin-top: 10px;
     margin-bottom: 20px;
+    font-size: 32px;
+    color: #4e4039;
 }
 
 .fifth-section .DropDown-text{
@@ -459,3 +466,6 @@
     list-style: none;
 
 }
+
+/*Faq Box*/
+
